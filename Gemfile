@@ -50,6 +50,8 @@ group :development, :test do
 end
 
 group :development do
+  gem 'letter_opener_web', group: :development
+
   # Use console on exceptions pages [https://github.com/rails/web-console]
   gem "web-console"
 
@@ -64,5 +66,6 @@ group :test do
   # Use system testing [https://guides.rubyonrails.org/testing.html#system-testing]
   gem "capybara"
   gem "selenium-webdriver"
-  gem 'bcrypt', '~> 3.1.7'
+  gem 'bcrypt', '~> 3.1.13'
+  gem 'devise'
 end

@@ -6,6 +6,10 @@ Rails.application.routes.draw do
   # ルートパスのルートを定義
   root 'home#index'
 
+  if Rails.env.development?
+    mount LetterOpenerWeb::Engine, at: "/letter_opener"
+  end
+
   # ユーザー登録用のルート
   resources :users, only: [:new, :create]
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
