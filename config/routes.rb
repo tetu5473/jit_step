@@ -1,6 +1,11 @@
 Rails.application.routes.draw do
+  
   # 認証関連のルート
   devise_for :users
+
+  # ユーザーのダッシュボードページへのルート
+  get '/users/dash_boards', to: 'dash_boards#index'
+  
   # アプリケーションのルートページ
   root to: 'home#index'
 
