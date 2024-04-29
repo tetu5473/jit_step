@@ -1,8 +1,13 @@
 class AddDeviseToUsers < ActiveRecord::Migration[6.1]
   def change
+    # 既存の encrypted_password カラムを削除する
+    remove_column :users, :encrypted_password if column_exists?(:users, :encrypted_password)
+
+    # encrypted_password カラムを再生成する
+    add_column :users, :encrypted_password, :string, null: false, default: ""
+
     ## Database authenticatable
     #add_column :users, :email, :string, null: false, default: ""
-    #add_column :users, :encrypted_password, :string, null: false, default: ""
 
     ## Recoverable
     add_column :users, :reset_password_token, :string
