@@ -76,6 +76,10 @@ Rails.application.configure do
 
   # メールの配信方法を設定
 config.action_mailer.delivery_method = :letter_opener_web
+
+# 実際にメールを送信する
+config.action_mailer.perform_deliveries = true
+
 # メール内で使用するURLのホストとポートを設定
 config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
 
