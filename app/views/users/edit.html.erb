@@ -28,10 +28,12 @@
         <%= f.password_field :password, class: 'form-control', autocomplete: "new-password" %>
       </div>
 
+      <small><%= t('devise.passwords.password_minimum') %></small>
+
       <div class="form-group">
         <%= f.label :password_confirmation, 'Password confirmation', class: 'form-label' %>
         <%= f.password_field :password_confirmation, class: 'form-control', autocomplete: "new-password" %>
-      </div>
+        </div>
 
       <div class="form-group">
         <%= f.label :current_password, "Current password (we need your current password to confirm your changes)", class: 'form-label' %>
@@ -40,7 +42,6 @@
 
       <div class="actions mt-3">
         <%= f.submit "Update", class: 'btn btn-primary' %>
-        <%= link_to 'Back', users_path, class: 'btn btn-secondary' %>
       </div>
     </div>
   <% end %>
