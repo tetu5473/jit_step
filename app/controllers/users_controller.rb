@@ -6,10 +6,22 @@ class UsersController < ApplicationController
   def create
     @user = User.new(user_params)
     if @user.save
-      # ユーザー作成後の処理、例えばログインページへリダイレクトなど
       redirect_to login_path, notice: 'Account was successfully created.'
     else
       render :new
+    end
+  end
+  
+  def edit
+    @user = User.find(params[:id])
+  end
+  
+  def update
+    @user = User.find(params[:id])
+    if @user.update(user_params)
+      redirect_to user_path(@user), notice: 'User was successfully updated.'
+    else
+      render :edit
     end
   end
   

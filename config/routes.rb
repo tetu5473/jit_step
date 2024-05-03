@@ -10,8 +10,7 @@ Rails.application.routes.draw do
   root to: 'home#index'
 
   # ユーザー関連のルート（newとcreateのみ）
-  resources :users, only: [:new, :create]
-
+  resources :users, only: [:new, :create, :edit, :update]
   # アプリケーションのヘルスチェック用ルート
   get 'up', to: 'rails/health#show', as: :rails_health_check
 
