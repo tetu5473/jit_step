@@ -14,10 +14,6 @@
     <% flash.each do |name, msg| %>
       <%= content_tag(:div, msg, class: "flash #{name}") %>
     <% end %>
-    <!-- ログアウトボタンの追加 -->
-    <% if user_signed_in? %>
-      <%= button_to 'Logout', destroy_user_session_path, method: :delete %>
-    <% end %>
 
     <!-- ここで個別のビューが挿入されます -->
     <%= yield %>
