@@ -14,8 +14,6 @@
     <% flash.each do |name, msg| %>
       <%= content_tag(:div, msg, class: "flash #{name}") %>
     <% end %>
-
-    <!-- ここで個別のビューが挿入されます -->
     <%= yield %>
   </body>
 </html>
