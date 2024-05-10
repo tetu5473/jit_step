@@ -17,10 +17,10 @@
             <%= f.label :remember_me, class: 'form-check-label' %>
           </div>
         <% end %>
-        <div class="actions mb-3">
-          <%= f.submit "Log in", class: 'btn btn-primary' %>
-        </div>
-      <% end %>
+          <div class="form-group text-center"> <!-- 中央揃えにするためのクラス追加 -->
+            <%= f.submit "Log in", class: 'btn btn-primary' %>
+          </div>
+        <% end %>
       <%= render "devise/shared/links" %>
     </div>
   </div>
