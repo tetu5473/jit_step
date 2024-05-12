@@ -1,5 +1,6 @@
 # Additional translations at https://github.com/heartcombo/devise/wiki/I18n
 
+
 en:
   devise:
     confirmations:
@@ -56,6 +57,7 @@ en:
       unlocked: "Your account has been unlocked successfully. Please sign in to continue."
   errors:
     messages:
+      blank: "can't be blank"
       already_confirmed: "was already confirmed, please try signing in"
       confirmation_period_expired: "needs to be confirmed within %{period}, please request a new one"
       expired: "has expired, please request a new one"
@@ -64,3 +66,11 @@ en:
       not_saved:
         one: "1 error prohibited this %{resource} from being saved:"
         other: "%{count} errors prohibited this %{resource} from being saved:"
+  activerecord:
+    errors:
+      models:
+        user:
+          attributes:
+            password:
+              blank: "password can't be blank"
+  
