@@ -6,25 +6,25 @@
         <%= render "devise/shared/error_messages", resource: resource %>
 
         <div class="form-group mb-3">
-          <%= f.label :Name %>
-          <%= f.email_field :email, autofocus: true, autocomplete: "email", class: 'form-control', required: true, style: "width: 100%;"  %>
+          <%= f.label :name, "Name" %>
+          <%= f.text_field :name, autofocus: true, class: 'form-control', required: true, style: "width: 100%;" %>
         </div>
 
         <div class="form-group mb-3">
-          <%= f.label :Email %>
-          <%= f.email_field :email, autofocus: true, autocomplete: "email", class: 'form-control', required: true, style: "width: 100%;"  %>
+          <%= f.label :email, "Email" %>
+          <%= f.email_field :email, autocomplete: "email", class: 'form-control', required: true, style: "width: 100%;" %>
         </div>
 
         <div class="form-group mb-3">
-          <%= f.label :Password %>
+          <%= f.label :password, "Password" %>
           <% if @minimum_password_length %>
           <em>(<%= @minimum_password_length %> characters minimum)</em>
           <% end %>
-          <%= f.password_field :password, autocomplete: "new-password", class: 'form-control', required: true, style: "width: 100%;"  %>
+          <%= f.password_field :password, autocomplete: "new-password", class: 'form-control', required: true, style: "width: 100%;" %>
         </div>
 
         <div class="form-group mb-3">
-          <%= f.label :Password_confirmation %>
+          <%= f.label :password_confirmation, "Password confirmation" %>
           <%= f.password_field :password_confirmation, autocomplete: "new-password", class: 'form-control', required: true, style: "width: 100%;" %>
         </div>
 
