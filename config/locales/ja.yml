@@ -1,0 +1,13 @@
+# config/locales/ja.yml
+ja:
+  hello: "こんにちは"
+  devise:
+    sessions:
+      new:
+        sign_in: 'ログイン'
+        email: 'メールアドレス'
+        password: 'パスワード'
+        remember_me: '次回から自動的にログイン'
+        forgot_your_password: 'パスワードを忘れましたか？'
+        sign_up: 'アカウント登録'
+        confirmation_instructions: 'アカウント確認のメールを受け取りっていませんか？'

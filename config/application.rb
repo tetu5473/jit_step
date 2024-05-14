@@ -23,8 +23,8 @@ module TestApp
     #
     # config.time_zone = "Central Time (US & Canada)"
     # config.eager_load_paths << Rails.root.join("extras")
-    #abcd
-    #abcd
-    #1234
+
+    # デフォルトのロケールを設定
+    config.i18n.default_locale = :ja
   end
 end
