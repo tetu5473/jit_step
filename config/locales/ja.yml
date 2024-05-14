@@ -1,6 +1,4 @@
-# config/locales/ja.yml
 ja:
-  hello: "こんにちは"
   devise:
     sessions:
       new:
