@@ -15,6 +15,8 @@ gem "bootsnap", require: false
 gem 'devise'  
 gem 'bootstrap', '~> 5.1.0'
 gem 'jquery-rails'
+gem 'sassc-rails'
+
 
 group :development, :test do
   gem "debug", platforms: %i[ mri mswin mswin64 mingw x64_mingw ]

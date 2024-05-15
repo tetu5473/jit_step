@@ -282,6 +282,7 @@ DEPENDENCIES
   letter_opener_web
   puma (>= 5.0)
   rails (~> 6.1.4, >= 6.1.4.6)
+  sassc-rails
   selenium-webdriver
   sprockets-rails
   sqlite3 (~> 1.4)

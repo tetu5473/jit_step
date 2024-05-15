@@ -1,3 +1,5 @@
+@import "bootstrap";
+
 .form-group {
   margin-bottom: 5px; /* 各フォーム要素の間隔を調整 */
 }
@@ -8,6 +10,6 @@
 }
 
 .form-control {
-  width: 15%; /* 入力フィールドをコンテナの幅いっぱいに広げる */
+  width: 100%; /* 入力フィールドをコンテナの幅いっぱいに広げる */
   padding: 2px 4px; /* 入力フィールドの内側のパディングを調整 */
 }
