@@ -1,11 +1,38 @@
 ja:
+  activerecord:
+    errors:
+      messages:
+        record_invalid: '入力された情報にエラーがあります:'
+      models:
+        user:
+          attributes:
+            email:
+              blank: 'メールアドレスを入力してください'
+              invalid: '無効なメールアドレスです'
+              taken: 'そのメールアドレスはすでに使用されています'
+            password:
+              blank: 'パスワードを入力してください'
+              too_short: 'パスワードは6文字以上で入力してください'
+              confirmation: 'パスワードが一致しません'
+            name:
+              blank: '名前を入力してください'
   devise:
-    sessions:
+    registrations:
       new:
-        sign_in: 'ログイン'
+        sign_up: 'アカウント登録'
+        name: '名前'
         email: 'メールアドレス'
         password: 'パスワード'
-        remember_me: '次回から自動的にログイン'
-        forgot_your_password: 'パスワードを忘れましたか？'
+        password_confirmation: 'パスワード（確認用）'
+        sign_up_button: 'アカウント登録'
+    shared:
+      links:
+        sign_in: 'ログイン'
         sign_up: 'アカウント登録'
-        confirmation_instructions: 'アカウント確認のメールを受け取りっていませんか？'
+        forgot_your_password: 'パスワードを忘れましたか？'
+        confirmation_instructions: 'アカウント確認のメールを受け取っていませんか？'
+    errors:
+      messages:
+        not_saved:
+          one: '1つのエラーが発生したため、ユーザーは保存されませんでした'
+          other: '%{count}件のエラーが発生したため、ユーザーは保存されませんでした'
