@@ -10,6 +10,12 @@ ja:
         password_confirmation: 'パスワード（確認用）'
         sign_up_button: 'アカウント登録'
         activation_message: 'アカウントの有効化について数分以内にメールでご連絡します。'
+    sessions:
+      new:
+        sign_in: 'ログイン'
+        email: 'メールアドレス'
+        password: 'パスワード'
+        remember_me: '次回から自動的にログイン'
     shared:
       links:
         sign_in: 'ログイン'
