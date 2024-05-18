@@ -25,8 +25,8 @@ ja:
     errors:
       messages:
         not_saved:
-          one: '1つのエラーが発生したため、ユーザーは保存されませんでした'
-          other: '%{count}件のエラーが発生したため、ユーザーは保存されませんでした'
+          one: '1件のエラーが発生したため、ユーザーは保存されませんでした。'
+          other: '%{count}件のエラーが発生したため、ユーザーは保存されませんでした。'
   activerecord:
     errors:
       models:
