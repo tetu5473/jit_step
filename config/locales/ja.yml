@@ -40,3 +40,6 @@ ja:
               blank: 'パスワードを入力してください'
       messages:
         blank: 'を入力してください'
+        not_saved:
+          one: '%{resource}を保存できませんでした：1つのエラーが発生しました'
+          other: '%{resource}を保存できませんでした：%{count}件のエラーが発生しました'
