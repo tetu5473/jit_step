@@ -62,7 +62,7 @@ ja:
       not_locked: "はロックされていません"
       not_saved:
         one: "この%{resource}を保存できなかったエラーが1つあります:"
-        other: "%{count}件のエラーが発生したため%{resource}は保存されませんでした。:"
+        other: "%{count}件のエラーが発生したためユーザーは保存されませんでした。:"
   activerecord:
     errors:
       models:
