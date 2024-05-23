@@ -1,0 +1,72 @@
+ja:
+  devise:
+    confirmations:
+      confirmed: "メールアドレスの確認が完了しました。"
+      send_instructions: "数分以内にメールアドレスの確認方法に関する指示をメールでお送りします。"
+      send_paranoid_instructions: "もしそのメールアドレスが登録されている場合は、メールアドレスの確認方法に関する指示をメールでお送りします。"
+    failure:
+      already_authenticated: "既にログインしています。"
+      inactive: "アカウントがまだ有効化されていません。"
+      invalid: "無効な%{authentication_keys}またはパスワードです。"
+      locked: "アカウントがロックされています。"
+      last_attempt: "アカウントがロックされるまで、あと1回です。"
+      not_found_in_database: "無効な%{authentication_keys}またはパスワードです。"
+      timeout: "セッションがタイムアウトしました。再度ログインしてください。"
+      unauthenticated: "続行するにはログインする必要があります。"
+      unconfirmed: "続行するにはメールアドレスの確認が必要です。"
+    mailer:
+      confirmation_instructions:
+        subject: "確認指示"
+      reset_password_instructions:
+        subject: "パスワードリセット指示"
+      unlock_instructions:
+        subject: "ロック解除指示"
+      email_changed:
+        subject: "メールアドレスの変更"
+      password_change:
+        subject: "パスワードの変更"
+    omniauth_callbacks:
+      failure: "%{kind}からの認証に失敗しました。理由: \"%{reason}\"。"
+      success: "%{kind}アカウントからの認証に成功しました。"
+    passwords:
+      password_minimum: "6文字以上"
+      no_token: "パスワードリセットメールからアクセスしないとこのページにアクセスできません。パスワードリセットメールからアクセスした場合は、提供されたURLが完全であることを確認してください。"
+      send_instructions: "数分以内にパスワードリセット方法に関する指示をメールでお送りします。"
+      send_paranoid_instructions: "もしそのメールアドレスが登録されている場合は、パスワードリセット方法に関する指示をメールでお送りします。"
+      updated: "パスワードが正常に変更されました。ログインしています。"
+      updated_not_active: "パスワードが正常に変更されました。"
+    registrations:
+      destroyed: "さようなら! アカウントが正常にキャンセルされました。またのご利用をお待ちしております。"
+      signed_up: "ようこそ! サインアップが正常に完了しました。"
+      signed_up_but_inactive: "サインアップが正常に完了しました。しかし、アカウントはまだ有効化されていません。"
+      signed_up_but_locked: "サインアップが正常に完了しました。しかし、アカウントはロックされています。"
+      signed_up_but_unconfirmed: "確認リンクを含むメッセージをメールアドレスに送信しました。リンクに従ってアカウントを有効化してください。"
+      update_needs_confirmation: "アカウントの更新に成功しましたが、新しいメールアドレスの確認が必要です。メールを確認し、確認リンクに従ってください。"
+      updated: "アカウントの更新に成功しました。"
+      updated_but_not_signed_in: "アカウントの更新に成功しましたが、パスワードが変更されたため再度ログインする必要があります。"
+    sessions:
+      signed_in: "ログインに成功しました。"
+      signed_out: "ログアウトに成功しました。"
+      already_signed_out: "既にログアウトしています。"
+    unlocks:
+      send_instructions: "数分以内にアカウントのロック解除方法に関する指示をメールでお送りします。"
+      send_paranoid_instructions: "もしそのアカウントが存在する場合は、数分以内にアカウントのロック解除方法に関する指示をメールでお送りします。"
+      unlocked: "アカウントのロック解除に成功しました。ログインしてください。"
+  errors:
+    messages:
+      blank: "を入力してください"
+      already_confirmed: "は既に確認済みです。サインインを試してください。"
+      confirmation_period_expired: "%{period}以内に確認する必要があります。新しい確認をリクエストしてください。"
+      expired: "は期限切れです。新しいものをリクエストしてください。"
+      not_found: "が見つかりません"
+      not_locked: "はロックされていません"
+      not_saved:
+        one: "この%{resource}を保存できなかったエラーが1つあります:"
+        other: "%{count}件のエラーが発生したため%{resource}は保存されませんでした。:"
+  activerecord:
+    errors:
+      models:
+        user:
+          attributes:
+            password:
+              blank: "パスワードを入力してください"
