@@ -25,9 +25,10 @@ ja:
     errors:
       messages:
         not_saved:
-          one: '1件のエラーが発生したため、ユーザーは保存されませんでした。'
+          one: '%{count}件のエラーが発生したため、ユーザーは保存されませんでした。'
           other: '%{count}件のエラーが発生したため、ユーザーは保存されませんでした。'
         blank: 'を入力してください'
+        invalid: 'は不正な値です'
   activerecord:
     errors:
       models:
@@ -37,8 +38,10 @@ ja:
               blank: '名前を入力してください'
             email:
               blank: 'メールアドレスを入力してください'
+              invalid: 'メールアドレスを正しく入力してください'
             password:
               blank: 'パスワードを入力してください'
-              too_short: 'パスワードは%{count}文字以上にしてください'
+              too_short: 'パスワードは6文字以上にしてください'
+              invalid: 'パスワードが不正です'
       messages:
         blank: 'を入力してください'
