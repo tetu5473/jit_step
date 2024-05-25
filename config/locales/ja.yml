@@ -1,12 +1,4 @@
 ja:
-  activerecord:
-    models:
-      user: 'ユーザー'
-    attributes:
-      user:
-        name: '名前'
-        email: 'メールアドレス'
-        password: 'パスワード'
   devise:
     registrations:
       new:
@@ -17,27 +9,26 @@ ja:
         password_min_length: '6文字以上'
         password_confirmation: 'パスワード（確認用）'
         sign_up_button: 'アカウント登録'
-        activation_message: ''
+        activation_message: 'アカウントの有効化について数分以内にメールでご連絡します。'
     sessions:
       new:
         sign_in: 'ログイン'
-        email: 'Eメール'
+        email: 'メールアドレス'
         password: 'パスワード'
         remember_me: '次回から自動的にログイン'
     shared:
       links:
         sign_in: 'ログイン'
         sign_up: 'アカウント登録'
-        forgot_your_password: ''
+        forgot_your_password: 'パスワードを忘れましたか？'
         confirmation_instructions: 'アカウント確認のメールを受け取っていませんか？'
     errors:
       messages:
         not_saved:
-          one: '1件のエラーが発生したため、ユーザーは保存されませんでした。'
+          one: '%{count}件のエラーが発生したため、ユーザーは保存されませんでした。'
           other: '%{count}件のエラーが発生したため、ユーザーは保存されませんでした。'
         blank: 'を入力してください'
-        invalid: 'が不正です'
-        too_short: 'は%{count}文字以上にしてください'
+        invalid: 'は不正な値です'
   activerecord:
     errors:
       models:
@@ -52,3 +43,5 @@ ja:
               blank: 'パスワードを入力してください'
               too_short: 'パスワードは6文字以上にしてください'
               invalid: 'パスワードが不正です'
+      messages:
+        blank: 'を入力してください'
