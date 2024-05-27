@@ -1,49 +1,76 @@
 ja:
   devise:
-    sessions:
-      new:
-        sign_in: 'ログイン'
-        email: 'メールアドレス'
-        password: 'パスワード'
-        remember_me: '次回から自動的にログイン'
-    registrations:
-      new:
-        sign_up: 'アカウント登録'
-        name: '名前'
-        email: 'メールアドレス'
-        password: 'パスワード'
-        password_min_length: '6文字以上'
-        password_confirmation: 'パスワード（確認用）'
-        sign_up_button: 'アカウント登録'
-        activation_message: 'アカウントの有効化について数分以内にメールでご連絡します。'
+    confirmations:
+      confirmed: "メールアドレスの確認が完了しました。"
+      send_instructions: "メールアドレス確認の方法を数分以内にお送りします。"
+      send_paranoid_instructions: "もしあなたのメールアドレスが登録されていれば、メールアドレス確認の方法を数分以内にお送りします。"
+    failure:
+      already_authenticated: "すでにログインしています。"
+      inactive: "アカウントが有効化されていません。"
+      invalid: "メールアドレスまたはパスワードが違います。"
+      locked: "アカウントがロックされています。"
+      last_attempt: "次が最後の試行です。"
+      not_found_in_database: "メールアドレスまたはパスワードが違います。"
+      timeout: "セッションの有効期限が切れました。再度ログインしてください。"
+      unauthenticated: "ログインまたはサインアップが必要です。"
+      unconfirmed: "メールアドレスの確認が必要です。"
+    mailer:
+      confirmation_instructions:
+        subject: "メールアドレス確認の方法"
+      reset_password_instructions:
+        subject: "パスワード再設定の方法"
+      unlock_instructions:
+        subject: "アカウントロック解除の方法"
+      email_changed:
+        subject: "メールアドレスの変更"
+      password_change:
+        subject: "パスワードの変更"
     passwords:
-      new:
-        forgot_your_password: 'パスワードを忘れましたか？'
-        email: 'メールアドレス'
-    shared:
-      links:
-        sign_in: 'ログイン'
-        sign_up: 'アカウント登録'
-        forgot_your_password: 'パスワードを忘れましたか？'
-        confirmation_instructions: 'アカウント確認のメールを受け取っていませんか？'
-    errors:
-      messages:
-        not_saved:
-          one: '1件のエラーが発生したため、ユーザーは保存されませんでした。'
-          other: '%{count}件のエラーが発生したため、ユーザーは保存されませんでした。'
-        blank: 'を入力してください'
-        invalid: 'は不正な値です'
+      password_minimum: "6文字以上"
+      no_token: "パスワードリセットのメールからアクセスしてください。"
+      send_instructions: "パスワード再設定の方法を数分以内にお送りします。"
+      send_paranoid_instructions: "もしあなたのメールアドレスが登録されていれば、パスワード再設定の方法を数分以内にお送りします。"
+      updated: "パスワードが正常に変更されました。"
+      updated_not_active: "パスワードが正常に変更されました。"
+    registrations:
+      destroyed: "アカウントは正常にキャンセルされました。またのご利用をお待ちしております。"
+      signed_up: "ようこそ！アカウント登録が成功しました。"
+      signed_up_but_inactive: "アカウント登録が成功しましたが、有効化されていません。"
+      signed_up_but_locked: "アカウント登録が成功しましたが、アカウントがロックされています。"
+      signed_up_but_unconfirmed: "確認用のメールを送りました。メール内のリンクをクリックしてアカウントを有効化してください。"
+      update_needs_confirmation: "アカウントの更新が成功しましたが、新しいメールアドレスを確認する必要があります。メールを確認してください。"
+      updated: "アカウントが正常に更新されました。"
+      updated_but_not_signed_in: "アカウントが正常に更新されましたが、パスワードが変更されたため再度ログインが必要です。"
+    sessions:
+      signed_in: "ログインしました。"
+      signed_out: "ログアウトしました。"
+      already_signed_out: "すでにログアウトしています。"
+    unlocks:
+      send_instructions: "アカウントロック解除の方法を数分以内にお送りします。"
+      send_paranoid_instructions: "もしあなたのアカウントが存在すれば、アカウントロック解除の方法を数分以内にお送りします。"
+      unlocked: "アカウントのロックが正常に解除されました。"
+  errors:
+    messages:
+      blank: "を入力してください"
+      already_confirmed: "すでに確認済みです。サインインしてください。"
+      confirmation_period_expired: "確認期間が過ぎています。新しい確認メールをリクエストしてください。"
+      expired: "有効期限が切れています。新しいものをリクエストしてください。"
+      not_found: "が見つかりません"
+      not_locked: "はロックされていません"
+      not_saved:
+        one: "この%{resource}を保存できなかったエラーが1つあります:"
+        other: "この%{resource}を保存できなかったエラーが%{count}件あります:"
   activerecord:
     errors:
       models:
         user:
           attributes:
             name:
-              blank: '名前を入力してください'
+              blank: "名前を入力してください"
             email:
-              blank: 'メールアドレスを入力してください'
-              invalid: 'メールアドレスを正しく入力してください'
+              blank: "メールアドレスを入力してください"
+              invalid: "メールアドレスを正しく入力してください"
             password:
-              blank: 'パスワードを入力してください'
-              too_short: 'パスワードは6文字以上にしてください'
-              invalid: 'パスワードが不正です'
+              blank: "パスワードを入力してください"
+              too_short: "パスワードは6文字以上にしてください"
+              invalid: "パスワードが不正です"
