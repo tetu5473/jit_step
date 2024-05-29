@@ -13,6 +13,7 @@ gem "jbuilder"
 gem "tzinfo-data", platforms: %i[ mswin mswin64 mingw x64_mingw jruby ]
 gem "bootsnap", require: false
 gem 'devise'  
+gem 'i18n'
 gem 'bootstrap', '~> 5.1.0'
 gem 'sassc-rails'
 gem 'jquery-rails'

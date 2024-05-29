@@ -4,7 +4,7 @@ ja:
       new:
         sign_up: 'アカウント登録'
         name: '名前'
-        email: 'Eメール'
+        email: 'メールアドレス'
         password: 'パスワード'
         password_min_length: '6文字以上'
         password_confirmation: 'パスワード（確認用）'
@@ -16,6 +16,9 @@ ja:
         email: 'メールアドレス'
         password: 'パスワード'
         remember_me: '次回から自動的にログイン'
+        forgot_your_password: 'パスワードを忘れましたか？'
+        sign_up: 'アカウント登録'
+        confirmation_instructions: 'アカウント確認のメールを受け取りっていませんか？'
     shared:
       links:
         sign_in: 'ログイン'
@@ -25,10 +28,8 @@ ja:
     errors:
       messages:
         not_saved:
-          one: '%{count}件のエラーが発生したため、ユーザーは保存されませんでした。'
+          one: '1件のエラーが発生したため、ユーザーは保存されませんでした。'
           other: '%{count}件のエラーが発生したため、ユーザーは保存されませんでした。'
-        blank: 'を入力してください'
-        invalid: 'は不正な値です'
   activerecord:
     errors:
       models:
