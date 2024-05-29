@@ -19,6 +19,7 @@ ja:
         forgot_your_password: 'パスワードを忘れましたか？'
         sign_up: 'アカウント登録'
         confirmation_instructions: 'アカウント確認のメールを受け取りっていませんか？'
+        activation_message: 'アカウントの有効化について数分以内にメールでご連絡します。'
     shared:
       links:
         sign_in: 'ログイン'
