@@ -4,12 +4,12 @@ ja:
       new:
         sign_up: 'アカウント登録'
         name: '名前'
-        email: 'メールアドレス'
+        email: 'Eメール'
         password: 'パスワード'
         password_min_length: '6文字以上'
         password_confirmation: 'パスワード（確認用）'
         sign_up_button: 'アカウント登録'
-        activation_message: 'アカウントの有効化について数分以内にメールでご連絡します。'
+        activation_message: ''
     sessions:
       new:
         sign_in: 'ログイン'
@@ -39,8 +39,8 @@ ja:
             name:
               blank: '名前を入力してください'
             email:
-              blank: 'メールアドレスを入力してください'
-              invalid: 'メールアドレスを正しく入力してください'
+              blank: 'Eメールを入力してください'
+              invalid: 'Eメールを正しく入力してください'
             password:
               blank: 'パスワードを入力してください'
               too_short: 'パスワードは6文字以上にしてください'
