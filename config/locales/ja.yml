@@ -25,6 +25,11 @@ ja:
         title: 'パスワードを忘れましたか？'
         email: 'Eメール'
         send_instructions: 'パスワードの再設定メールを送信する'
+    confirmations:
+      new:
+        title: 'アカウント確認のメールを受け取っていませんか？'
+        email: 'Eメール'
+        resend_instructions: 'アカウント確認メール再送'
     shared:
       links:
         sign_in: 'ログイン'
