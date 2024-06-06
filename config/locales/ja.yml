@@ -21,6 +21,12 @@ ja:
         confirmation_instructions: 'アカウント確認のメールを受け取りっていませんか？'
         activation_message: 'アカウントの有効化について数分以内にメールでご連絡します。'
     passwords:
+      edit:
+        title: 'パスワードを変更する'
+        password: '新しいパスワード'
+        password_confirmation: '新しいパスワードの確認'
+        password_min_length: '6文字以上'
+        change_password_button: 'パスワードを変更する'
       new:
         title: 'パスワードを忘れましたか？'
         email: 'Eメール'
