@@ -63,3 +63,5 @@ ja:
               invalid: 'パスワードが不正です'
       messages:
         blank: 'を入力してください'
+        too_short: 'は%{count}文字以上にしてください'
+        confirmation: 'が一致しません'
