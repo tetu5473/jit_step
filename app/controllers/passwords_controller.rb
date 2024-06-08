@@ -9,7 +9,7 @@ class PasswordsController < Devise::PasswordsController
     else
       flash.now[:alert] = "パスワードの変更に失敗しました。"
       set_minimum_password_length
-      respond_with_navigational(resource) { render :edit }
+      respond_with_navigational(resource) { render :edit, status: :unprocessable_entity }
     end
   end
 

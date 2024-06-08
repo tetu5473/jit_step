@@ -3,19 +3,23 @@
     <div class="col-md-6">
       <h2 class="mb-3 text-center"><%= t('devise.passwords.new.title') %></h2>
 
-      <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
+      <!-- パスワードリセットのフォーム -->
+      <%= form_for(resource, as: resource_name, url: new_user_password_path, html: { method: :post }) do |f| %>
         <%= render "devise/shared/error_messages", resource: resource %>
 
+        <!-- メールアドレス入力フィールド -->
         <div class="mb-3">
           <%= f.label :email, t('devise.passwords.new.email'), class: 'form-label' %><br />
           <%= f.email_field :email, autofocus: true, autocomplete: "email", class: 'form-control' %>
         </div>
 
+        <!-- 送信ボタン -->
         <div class="text-center">
           <%= f.submit t('devise.passwords.new.send_instructions'), class: 'btn btn-primary' %>
         </div>
       <% end %>
 
+      <!-- その他のリンク -->
       <div class="text-left mt-3">
         <%= render "devise/shared/links" %>
       </div>

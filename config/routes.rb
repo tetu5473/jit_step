@@ -2,6 +2,11 @@ Rails.application.routes.draw do
   # 認証関連のルート
   devise_for :users, controllers: { passwords: 'passwords' }
 
+  # パスワードリセットのGETリクエスト用のルートを追加
+  devise_scope :user do
+    get "/users/password", to: "devise/passwords#new" # ここで新しいパスワードリセットのフォームを表示するアクションを指定
+  end
+
   # ユーザーのダッシュボードページへのルート
   get '/users/dash_boards', to: 'dash_boards#index'
   

@@ -21,16 +21,16 @@ ja:
         confirmation_instructions: 'アカウント確認のメールを受け取りっていませんか？'
         activation_message: 'アカウントの有効化について数分以内にメールでご連絡します。'
     passwords:
-      edit:
-        title: 'パスワードを変更する'
-        password: '新しいパスワード'
-        password_confirmation: '新しいパスワードの確認'
-        password_min_length: '6文字以上'
-        change_password_button: 'パスワードを変更する'
       new:
-        title: 'パスワードを忘れましたか？'
-        email: 'Eメール'
-        send_instructions: 'パスワードの再設定メールを送信する'
+        title: "パスワードを忘れましたか？"
+        email: "メールアドレス"
+        send_instructions: "パスワード再設定の方法を送信"
+      edit:
+        title: "パスワードを変更する"
+        password: "新しいパスワード"
+        password_min_length: "6文字以上"
+        password_confirmation: "新しいパスワードの確認"
+        change_password_button: "パスワードを変更する"
     confirmations:
       new:
         title: 'アカウント確認のメールを受け取っていませんか？'
@@ -55,7 +55,7 @@ ja:
             name:
               blank: '名前を入力してください'
             email:
-              blank: 'Eメールを入力してください'
+              blank: 'を入力してください'
               invalid: 'Eメールを正しく入力してください'
             password:
               blank: 'パスワードを入力してください'
