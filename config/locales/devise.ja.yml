@@ -27,6 +27,14 @@ ja:
         unlock_token: ロック解除用トークン
         updated_at: 更新日
         name: 名前
+    errors:
+      models:
+        user:
+          attributes:
+            email:
+              invalid: "有効なメールアドレスを入力してください"
+            password:
+              too_short: "パスワードは6文字以上で入力してください"
     models:
       user: ユーザー
   devise:
@@ -149,6 +157,8 @@ ja:
   errors:
     messages:
       blank: を入力してください
+      invalid: "無効です"
+      too_short: "短すぎます"
       already_confirmed: は既に登録済みです。ログインしてください。
       confirmation_period_expired: の期限が切れました。%{period} までに確認する必要があります。 新しくリクエストしてください。
       expired: 入力してください
