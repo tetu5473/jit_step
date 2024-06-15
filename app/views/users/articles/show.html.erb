@@ -1,9 +1,2 @@
-<h1><%= @article.title %></h1>
-<p><%= @article.body %></p>
-
-<% if @article.image.present? %>
-  <%= image_tag @article.image, style: "width: 200px;" %>
-<% end %>
-
-<%= link_to '編集', edit_users_article_path(@article), class: 'btn btn-success' %>
-<%= link_to '戻る', users_articles_path, class: 'btn btn-secondary' %>
+<h1>Users::Articles#show</h1>
+<p>Find me in app/views/users/articles/show.html.erb</p>
