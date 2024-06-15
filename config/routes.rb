@@ -1,9 +1,6 @@
 Rails.application.routes.draw do
   namespace :users do
-    get 'articles/index'
-    get 'articles/show'
-    get 'articles/new'
-    get 'articles/edit'
+    resources :articles
   end
   # 認証関連のルート
   devise_for :users
