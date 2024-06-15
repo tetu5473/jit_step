@@ -1,0 +1,35 @@
+<h1>記事一覧</h1>
+
+<%= link_to '記事新規作成', new_users_article_path, class: 'btn btn-primary' %>
+
+<table class="table table-striped mt-3">
+  <thead>
+    <tr>
+      <th>詳細表示</th>
+      <th>タイトル</th>
+      <th>内容</th>
+      <th>画像</th>
+      <th>編集・削除</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @articles.each do |article| %>
+      <tr>
+        <td><%= link_to '詳細', [:users, article], class: 'btn btn-info' %></td>
+        <td><%= article.title %></td>
+        <td><%= truncate(article.body, length: 50) %></td>
+        <td>
+          <% if article.image.present? %>
+            <%= image_tag article.image, style: "width: 100px;" %>
+          <% else %>
+            <p>No Image</p>
+          <% end %>
+        </td>
+        <td>
+          <%= link_to '編集', edit_users_article_path(article), class: 'btn btn-success' %>
+          <%= link_to '削除', [:users, article], method: :delete, data: { confirm: '本当に削除しますか？' }, class: 'btn btn-danger' %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
