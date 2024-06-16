@@ -1,23 +1,35 @@
-<h1>記事詳細</h1>
+<h1 class="text-center">記事詳細</h1>
 
-<p>
-  <strong>タイトル:</strong>
-  <%= @article.title %>
-</p>
+<div class="container">
+  <table class="table">
+    <thead>
+      <tr class="text-center">
+        <th>タイトル</th>
+        <th>内容</th>
+        <th>画像</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="text-center">
+        <td><%= @article.title %></td>
+        <td><%= @article.content %></td>
+        <td>
+          <% if @article.image.attached? %>
+            <%= image_tag @article.image, size: "100x100", class: "img-fluid" %>
+          <% else %>
+            画像がありません
+          <% end %>
+        </td>
+      </tr>
+    </tbody>
+  </table>
 
-<p>
-  <strong>内容:</strong>
-  <%= @article.content %>
-</p>
+  <div class="text-center">
+    <%= link_to '編集', edit_users_article_path(@article), class: 'btn btn-success mr-2' %>
+    <%= link_to '削除', users_article_path(@article), method: :delete, data: { confirm: '本当に削除しますか？' }, class: 'btn btn-danger' %>
+  </div>
 
-<p>
-  <strong>画像:</strong>
-  <% if @article.image.attached? %>
-    <%= image_tag @article.image, size: "300x300" %>
-  <% else %>
-    画像がありません
-  <% end %>
-</p>
-
-<%= link_to '編集', edit_users_article_path(@article), class: 'btn btn-success' %>
-<%= link_to '戻る', users_articles_path, class: 'btn btn-secondary' %>
+  <div class="text-center mt-3">
+    <%= link_to '記事一覧へ戻る', users_articles_path, class: 'btn btn-primary' %>
+  </div>
+</div>

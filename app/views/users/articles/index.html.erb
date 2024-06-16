@@ -3,34 +3,36 @@
   <%= link_to '記事新規作成', new_users_article_path, class: 'btn btn-primary mb-3 w-50' %>
 </div>
 
-<table class="table table-striped">
-  <thead>
-    <tr>
-      <th>詳細表示</th>
-      <th>タイトル</th>
-      <th>内容</th>
-      <th>画像</th>
-      <th>編集・削除</th>
-    </tr>
-  </thead>
-  <tbody>
-    <% @articles.each do |article| %>
-      <tr>
-        <td><%= link_to '詳細', users_article_path(article), class: 'btn btn-primary' %></td>
-        <td><%= article.title %></td>
-        <td><%= article.content %></td>
-        <td>
-          <% if article.image.attached? %>
-            <%= image_tag article.image, size: "100x100" %>
-          <% else %>
-            画像がありません
-          <% end %>
-        </td>
-        <td>
-          <%= link_to '編集', edit_users_article_path(article), class: 'btn btn-success' %>
-          <%= link_to '削除', users_article_path(article), method: :delete, data: { confirm: '本当に削除しますか？' }, class: 'btn btn-danger' %>
-        </td>
+<div class="container">
+  <table class="table">
+    <thead>
+      <tr class="text-center">
+        <th>詳細表示</th>
+        <th>タイトル</th>
+        <th>内容</th>
+        <th>画像</th>
+        <th>編集・削除</th>
       </tr>
-    <% end %>
-  </tbody>
-</table>
+    </thead>
+    <tbody>
+      <% @articles.each do |article| %>
+        <tr class="text-center">
+          <td><%= link_to '詳細', users_article_path(article), class: 'btn btn-primary' %></td>
+          <td><%= article.title %></td>
+          <td><%= article.content %></td>
+          <td>
+            <% if article.image.attached? %>
+              <%= image_tag article.image, size: "100x100" %>
+            <% else %>
+              画像がありません
+            <% end %>
+          </td>
+          <td>
+            <%= link_to '編集', edit_users_article_path(article), class: 'btn btn-success mr-2' %>
+            <%= link_to '削除', users_article_path(article), method: :delete, data: { confirm: '本当に削除しますか？' }, class: 'btn btn-danger' %>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
