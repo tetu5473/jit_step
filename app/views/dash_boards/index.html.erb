@@ -5,8 +5,8 @@
         <h1>Dash Boards</h1>
         <p>sample</p>
         <div class="d-grid gap-2">
+          <%= link_to '記事一覧', users_articles_path, class: 'btn btn-primary btn-lg' %>
           <%= link_to '編集', edit_user_registration_path, class: 'btn btn-primary btn-lg' %>
-          <!-- ログアウトボタンのクラスをbtn-warningに変更して黄色にします -->
           <%= link_to 'ログアウト', destroy_user_session_path, method: :delete, data: { turbo_method: :delete }, class: 'btn btn-warning btn-lg' %>
         </div>
       </div>
