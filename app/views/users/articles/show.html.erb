@@ -1,2 +1,23 @@
-<h1>Users::Articles#show</h1>
-<p>Find me in app/views/users/articles/show.html.erb</p>
+<h1>記事詳細</h1>
+
+<p>
+  <strong>タイトル:</strong>
+  <%= @article.title %>
+</p>
+
+<p>
+  <strong>内容:</strong>
+  <%= @article.content %>
+</p>
+
+<p>
+  <strong>画像:</strong>
+  <% if @article.image.attached? %>
+    <%= image_tag @article.image, size: "300x300" %>
+  <% else %>
+    画像がありません
+  <% end %>
+</p>
+
+<%= link_to '編集', edit_users_article_path(@article), class: 'btn btn-success' %>
+<%= link_to '戻る', users_articles_path, class: 'btn btn-secondary' %>
