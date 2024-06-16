@@ -2,7 +2,7 @@
 
 module Users
   class ArticlesController < ApplicationController
-    before_action :set_article, only: [:show, :edit, :update, :destroy]
+    before_action :set_article, only: [:show, :edit, :update, :destroy, :remove_image]
 
     def index
       @articles = Article.all
@@ -25,7 +25,6 @@ module Users
     end
 
     def edit
-      # `@article` is already set by `set_article` before_action
     end
 
     def update
@@ -41,6 +40,11 @@ module Users
       redirect_to users_articles_url, notice: 'Article was successfully destroyed.'
     end
 
+    def remove_image
+      @article.image.purge
+      redirect_to edit_users_article_path(@article), notice: '画像が削除されました。'
+    end
+
     private
 
     def set_article
@@ -48,7 +52,7 @@ module Users
     end
 
     def article_params
-      params.require(:article).permit(:title, :body, :image)
+      params.require(:article).permit(:title, :content, :image)
     end
   end
 end

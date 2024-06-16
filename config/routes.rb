@@ -1,6 +1,10 @@
 Rails.application.routes.draw do
   namespace :users do
-    resources :articles
+    resources :articles do
+      member do
+        delete :remove_image  # この行が存在することを確認
+      end
+    end
   end
   # 認証関連のルート
   devise_for :users
